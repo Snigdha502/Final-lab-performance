@@ -1,0 +1,25 @@
+mkdir problem3.txt
+touch problem3.txt
+nano problem3.txt
+chmod +x problem3.txt
+./ problem3.txt
+
+#!/bin/bash
+
+read -p "Student ID: " id
+read -p "Mark 1: " m1
+read -p "Mark 2: " m2
+read -p "Mark 3: " m3
+
+total=$((m1+m2+m3))
+per=$((total*100/300))
+
+if [ $per -ge 40 ]; then
+  grade="Pass"
+else
+  grade="Fail"
+fi
+
+echo "Total = $total"
+echo "Percentage = $per%"
+echo "Result = $grade"
